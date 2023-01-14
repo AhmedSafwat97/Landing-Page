@@ -43,7 +43,7 @@ window.addEventListener('scroll',(event)=>{
 isScrolling = setTimeout(function(){ 
 // If the user hasn't scrolled while setTimeout is running then hide the fixed navigation bar
     navBar.style.display = 'none';
-}, 200000000);
+}, 4000);
 
 // Cancels the timeout if the user scrolls again
 window.addEventListener('scroll', function(){
