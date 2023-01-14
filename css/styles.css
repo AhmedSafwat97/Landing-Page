@@ -90,6 +90,14 @@ section {
     transition: ease 0.3s all;
 }
 
+@media (max-width: 35em) {
+    .navbar__menu .menu__link{
+        pointer-events: none;
+      }
+    }
+    
+  
+
 /* Make a different style for active links */
 .navbar__menu .active-link {
     background: #26dff7;
@@ -203,8 +211,11 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 15px;
+    background: rgb(120, 40, 125 0.6);
+    background: linear-gradient(
+        0deg, rgb(88 6 95 / 72%) 0%,
+         rgba(0, 0, 0, 0) 100%);
 }
 
 section.your-active-class .landing__container::before {
@@ -231,6 +242,10 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+
+
+
 
 .top{
     background-color: red;
