@@ -64,13 +64,6 @@ function scrollBehavior( list, sec){
  }
 
 
-//  scroll to top of the page when the user click on the button
-document.getElementById("to-top").addEventListener('click', function(){
-    window.scrollTo({
-        top: 0,
-        behavior:"smooth"});
-});
-
 
 
 
