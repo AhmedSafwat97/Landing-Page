@@ -1,68 +1,156 @@
 <!DOCTYPE >
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-  <script defer src="/js/app.js"></script>
-</head>
-<body>
-  <!-- HTML Follows BEM naming conventions 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script defer src="/js/app.js"></script>
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list" class="nav__list"></ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Landing Page </h1>
+    <header class="page__header">
+      <nav class="navbar__menu">
+  <div class="The-Logo">
+          <h2 class="logo">Pizza Hub</h2>
+          <img src="./img/logo.png" />
+  </div>
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list" class="nav__list"></ul>
+      </nav>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
+    <main>
+      <header class="main__hero">
+        <h1>Pizza Hub</h1>
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+    <div>
+      <h3 class="Menu">Menu</h3>
+    </div>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      <section class="section1" data-nav="Margherita" class="your-active-class">
+        <div class="img-mop">
+          <img
+            class="img-mop"
+            src="https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          />
+        </div>
+        <div class="landing__container">
+          <h2 class="sec-header">Margherita</h2>
+          <p class="sec-p">
+            This classic pizza originated in Naples, Italy and is topped with
+            tomato sauce, fresh mozzarella cheese, and fresh basil leaves. It is
+            a simple but delicious pizza that highlights the quality of the
+            ingredients. Pizza Margherita is a classic and beloved Italian dish
+            that has become a staple in pizzerias all over the world. Its simple
+            yet delicious combination of ingredients - tomato sauce, fresh
+            mozzarella cheese, and fresh basil leaves - has won over countless
+            pizza lovers.
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+        <img
+          class="img1"
+          src="https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        />
+      </section>
+      <section class="section2" data-nav="Hawaiian" class="your-active-class">
+        
+      <div class="img-mop">
+        <img
+          class="img-mop"
+          src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481&q=80"
+        />
       </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        
+        <img
+          class="img2"
+          src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481&q=80"
+        />
+        <div class="landing__container2">
+          <h2 class="sec-header sec2">Hawaiian</h2>
+          <p class="sec-p">
+            The Hawaiian pizza is a divisive but popular pizza that features
+            tomato sauce, mozzarella cheese, ham, and pineapple. It's a sweet
+            and salty combination that can be enjoyed by those who love the
+            combination of fruit and meat. Hawaiian pizza is a controversial but
+            popular pizza that is known for its sweet and savory combination of
+            toppings. The pizza features tomato sauce, mozzarella cheese, ham,
+            and pineapple, and is often finished with a drizzle of barbecue
+            sauce.
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </section>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      <section class="section1" data-nav="Pepperoni" class="your-active-class">
+        <div class="img-mop">
+          <img
+            class="img-mop"
+            src="https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+          />
+        </div>
+        
+        <div class="landing__container">
+          <h2 class="sec-header">Pepperoni</h2>
+          <p class="sec-p">
+            Pepperoni pizza is a favorite in the United States and features
+            tomato sauce, mozzarella cheese, and slices of spicy pepperoni
+            sausage. It's a classic pizza that is both savory and satisfying.
+            Pepperoni is a type of dry, cured sausage that is made from beef and
+            pork. It is seasoned with a blend of spices, including paprika,
+            garlic, and cayenne pepper, which gives it its signature spicy
+            flavor. When placed on a pizza, the pepperoni cooks in the oven and
+            releases its spicy oils, creating a deliciously savory aroma.
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+        <img
+          class="img1"
+          src="https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+        />
+      </section>
+      <section class="section2" data-nav="Meat Lovers" class="your-active-class">
+              <div class="img-mop">
+        <img
+          class="img-mop"
+          src="https://images.unsplash.com/photo-1599321955726-e048426594af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        />
       </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        
+        
+        <img
+          class="img2"
+          src="https://images.unsplash.com/photo-1599321955726-e048426594af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        />
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section4" data-nav="Section 4">
-      <div class="landing__container">
-        <h2>Section 4</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <button class="top" id="to-top">To Top</button>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
-</body>
+        <div class="landing__container2">
+          <h2 class="sec-header sec2">Meat Lovers</h2>
+          <p class="sec-p">
+            This pizza is a hearty and indulgent option for meat lovers. It
+            typically features tomato sauce, mozzarella cheese, and a variety of
+            meats such as pepperoni, sausage, bacon, and sometimes ham or beef.
+            It's a filling and savory pizza that's perfect for those who love a
+            protein-packed meal.
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </section>
+      <button class="top" id="to-top">To Top</button>
+    </main>
+    <footer class="page__footer">
+      <p>Pizza hub @designed and developed By : Ahmed Safwat</p>
+    </footer>
+  </body>
 </html>
